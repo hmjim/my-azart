@@ -35,4 +35,4 @@ Disallow: /comments
 Disallow: */comment-*
 Disallow: /wp-json/
 Disallow: */feed
-Host: my-azartik.ew.r.appspot.com
+Host: my-azart.azurewebsites.net

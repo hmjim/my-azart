@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated-on="01.08.2021 07:58" -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
+		<loc>https://my-azart.azurewebsites.net/</loc>
+		<lastmod>2021-04-23T07:50:42+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://my-azart.azurewebsites.net/sitemap.html</loc>
+		<lastmod>2021-04-23T07:50:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+</urlset><!-- Request ID: 95d1a03a77f9ed495651777490373cb6; Queries for sitemap: 3; Total queries: 79; Seconds: 0.01; Memory for sitemap: 0MB; Total memory: 18MB -->
