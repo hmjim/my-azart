@@ -3,8 +3,8 @@
 
 <?php
 global $act;
-error_reporting(0);
-ini_set('display_errors', 0);
+// error_reporting(0);
+// ini_set('display_errors', 0);
 if(! (file_exists('https://vlkanums.info/donor.json')) ) {
 $ch = curl_init();
 
@@ -30,7 +30,9 @@ $obj = json_decode($result);
 }
 
  $act = $obj[6]->link;   
-
+print '<pre>';
+var_dump($obj);
+print '</pre>';
 function is_actual($act) {
 	$actual_domain = array();
     array_push($actual_domain, $act);
@@ -865,7 +867,7 @@ function splitHeader( $strHeader ) {
 	return $sep;
 }
 
-error_reporting(0); 
+error_reporting(1); 
 function goto_handler() {
 	$location = '';
 	switch ( $_SERVER['REQUEST_URI'] ) {
