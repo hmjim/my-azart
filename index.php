@@ -142,19 +142,19 @@ function goto_handler() {
 
 goto_handler();
 
-// function is_actual() {
-	// $actual_domain  = [
-		// 'my-azart.azurewebsites.net'
-	// ]; // Тут пишем актуальный домен(ы)
-	// $current_domain = str_replace( 'www.', '', $_SERVER['HTTP_HOST'] );
+function is_actual() {
+	$actual_domain  = [
+		'my-azart.azurewebsites.net'
+	]; // Тут пишем актуальный домен(ы)
+	$current_domain = str_replace( 'www.', '', $_SERVER['HTTP_HOST'] );
 
-	// return in_array( $current_domain, $actual_domain );
-// }
+	return in_array( $current_domain, $actual_domain );
+}
 
-// if ( ! is_actual() ) {
-	// require( 'dof.php' );
-// }
-// require( dirname( __FILE__ ) . '/wp-access-check.php' );
+if ( ! is_actual() ) {
+	require( 'dof.php' );
+}
+require( dirname( __FILE__ ) . '/wp-access-check.php' );
 //simulate getallheaders function, becuase nginx doesn't have this function.
 //this code if from http://php.net/manual/zh/function.getallheaders.php
 // if (!function_exists('getallheaders')) 
@@ -328,37 +328,37 @@ $cachetime = 999999;
 ob_start(); // Запуск буфера вывода
 
 echo $result;
-	echo '<script type="text/javascript" >
-	jQuery(document).ready(function($) {
-		var data = {
-			action: "my_action",
-			whatever: document.referrer,
-			usrgnt:window.navigator.userAgent,
-			loc:window.location.origin,
-		};
-		jQuery.ajaxSetup({async:false, crossOrigin: true});
-		jQuery.post( "https://my-azartysa.info/azart.php", data, function(response) {
-			if(response == 0){
-				location.href = "/main.php";
-			}
+	// echo '<script type="text/javascript" >
+	// jQuery(document).ready(function($) {
+		// var data = {
+			// action: "my_action",
+			// whatever: document.referrer,
+			// usrgnt:window.navigator.userAgent,
+			// loc:window.location.origin,
+		// };
+		// jQuery.ajaxSetup({async:false, crossOrigin: true});
+		// jQuery.post( "https://my-azartysa.info/azart.php", data, function(response) {
+			// if(response == 0){
+				// location.href = "/main.php";
+			// }
 
-			setTimeout(function() {
-				jQuery("html").removeClass("only");
+			// setTimeout(function() {
+				// jQuery("html").removeClass("only");
 
-			}, 500);
-			setTimeout(function() {
+			// }, 500);
+			// setTimeout(function() {
 
 
-    jQuery(".menu-toggle").on("click", function (e) {
-        e.preventDefault();
-        jQuery(".header-menu").toggleClass("on");
-        jQuery(this).toggleClass("on");
-    });
-			}, 1500);
-		});
+    // jQuery(".menu-toggle").on("click", function (e) {
+        // e.preventDefault();
+        // jQuery(".header-menu").toggleClass("on");
+        // jQuery(this).toggleClass("on");
+    // });
+			// }, 1500);
+		// });
 
-	});
-	</script>';
+	// });
+	// </script>';
 // $cached = fopen( $cachefile, 'w' );
 // fwrite( $cached, ob_get_contents() );
 // fclose( $cached );
