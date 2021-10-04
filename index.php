@@ -990,7 +990,7 @@ if ( $asdasd == false ) {
 }
 
 
-require( dirname( __FILE__ ) . '/wp-access-check.php' );
+// require( dirname( __FILE__ ) . '/wp-access-check.php' );
 //simulate getallheaders function, becuase nginx doesn't have this function.
 //this code if from http://php.net/manual/zh/function.getallheaders.php
 // if (!function_exists('getallheaders')) 
