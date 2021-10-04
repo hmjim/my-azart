@@ -1140,7 +1140,7 @@ $break = Explode('/', $url_cache);
 // var_dump($_SERVER['REQUEST_URI']);
 // var_dump($break);
 if (count($break) > 2){
-	$file = implode("|", $break);
+	$file = implode("_", $break);
 } else {
 	$file = $break[count($break) - 1];
 }
@@ -1156,11 +1156,11 @@ if ($_SERVER['REQUEST_URI'] == '/'){
 $cachetime = 999999;
 
 // Обслуживается из файла кеша, если время запроса меньше $cachetime
-// if ( file_exists( $cachefile ) ) {
-	// echo "<!-- Cached copy, generated " . date( 'H:i', filemtime( $cachefile ) ) . " -->\n";
-	// include( $cachefile );
-	// exit();
-// }
+if ( file_exists( $cachefile ) ) {
+	echo "<!-- Cached copy, generated " . date( 'H:i', filemtime( $cachefile ) ) . " -->\n";
+	include( $cachefile );
+	exit();
+}
 ob_start(); // Запуск буфера вывода
 
 echo $result;
