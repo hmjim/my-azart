@@ -4,7 +4,7 @@
 
 
 
-$result = exec ('/home/site/startup.sh');
+$result = exec ('startup.sh');
 echo $result;
 if ($result)
 {
