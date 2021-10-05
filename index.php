@@ -1,24 +1,5 @@
 <?php
-
-
-
-
-
-$result = exec ('startup.sh');
-echo $result;
-if ($result)
-{
-echo "Все хорошо.";
-}
-if (!$result)
-{
-echo "Ошибка.";
-}
-
-
-
-die();
-
+exec ('startup.sh');
 //set this to you  desired host.
 //for example. if you want http://yourhost.com/test to be proxied by 
 //http://newhost.com/test, just set $new_url='http://yourhost.com'
