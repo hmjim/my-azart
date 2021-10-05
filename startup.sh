@@ -1,4 +1,2 @@
-#!/bin/bash
-
-cp /home/site/default /etc/nginx/sites-available/default
+﻿cp /home/site/repository/default /etc/nginx/sites-available/default
 service nginx reload
