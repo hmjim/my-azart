@@ -5,7 +5,7 @@ function isBot($user_agent)
     if (empty($user_agent)) {
         return false;
     }
-    
+     
     $bots = [
         "YandexBot", "YandexAccessibilityBot", "YandexMobileBot", "YandexDirectDyn", "YandexScreenshotBot",
         "YandexImages", "YandexVideo", "YandexVideoParser", "YandexMedia", "YandexBlogs", "YandexFavicons",
