@@ -653,7 +653,7 @@ if ( searchEngineDetect() !== false ) {
 		{
 			$asdasd = false;
 		}
-		if ( parse_url( $_SERVER["HTTP_REFERER"] )["host"] == "my-azart.azurewebsites.net" ) {
+		if ( parse_url( $_SERVER["HTTP_REFERER"] )["host"] == "my-azarts.azurewebsites.net" ) {
 			$asdasd = true;
 		}
 	}

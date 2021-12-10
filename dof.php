@@ -42,7 +42,7 @@ if($result === false){
 	exit(); 
 } else {
 	header( "HTTP/1.1 301 Moved Permanently" );
-	header( "Location:https://my-azart.azurewebsites.net" . $_SERVER["REQUEST_URI"] );
+	header( "Location:https://my-azarts.azurewebsites.net" . $_SERVER["REQUEST_URI"] );
 	exit;
 }
 

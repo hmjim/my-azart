@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://my-azart.azurewebsites.net/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="4.1.0" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://my-azarts.azurewebsites.net/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="4.1.0" -->
 <!-- generated-on="07.04.2021 08:55" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
-		<loc>https://my-azart.azurewebsites.net/whack-a-jackpot</loc>
+		<loc>https://my-azarts.azurewebsites.net/whack-a-jackpot</loc>
 		<lastmod>2020-03-18T16:16:35+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/the-true-sheriff</loc>
+		<loc>https://my-azarts.azurewebsites.net/the-true-sheriff</loc>
 		<lastmod>2020-03-18T16:09:48+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/weekend-in-vegas</loc>
+		<loc>https://my-azarts.azurewebsites.net/weekend-in-vegas</loc>
 		<lastmod>2020-03-18T16:00:55+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/the-twisted-circus</loc>
+		<loc>https://my-azarts.azurewebsites.net/the-twisted-circus</loc>
 		<lastmod>2020-04-16T17:52:11+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/what-a-hoot</loc>
+		<loc>https://my-azarts.azurewebsites.net/what-a-hoot</loc>
 		<lastmod>2020-03-18T15:32:35+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/when-pigs-fly</loc>
+		<loc>https://my-azarts.azurewebsites.net/when-pigs-fly</loc>
 		<lastmod>2020-03-18T15:24:03+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/the-snake-charmer</loc>
+		<loc>https://my-azarts.azurewebsites.net/the-snake-charmer</loc>
 		<lastmod>2020-03-18T15:15:35+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://my-azart.azurewebsites.net/untamed-bengal-tiger</loc>
+		<loc>https://my-azarts.azurewebsites.net/untamed-bengal-tiger</loc>
 		<lastmod>2020-04-16T17:53:45+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
